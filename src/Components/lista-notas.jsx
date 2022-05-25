@@ -5,15 +5,16 @@ class ListaNotas extends Component{
     render(){
         return(
             <ul>
-                <li>
-                  <CardNota />
-                </li>
-                <li>
-                  <CardNota />
-                </li>
-                <li>
-                  <CardNota />
-                </li>
+                {
+                  Array.of("Estudo", "Estudo", "Trabalho").map((categoria, index) => {
+                    return(
+                      <li key={index}>
+                        <div>{categoria}</div>
+                        <CardNota />
+                      </li>
+                    )
+                  })
+                }
             </ul>
         )
     }
