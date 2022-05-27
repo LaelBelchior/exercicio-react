@@ -5,10 +5,15 @@ import './assets/App.css';
 import './assets/index.css';
 
 class App extends Component{
+
+  criarNota(titulo, texto){
+    console.log(`aaaaaaaaa ${titulo} aaaaa ${texto}`)
+  }  
+
   render(){
     return (
       <section className='conteudo'>
-        <FormularioCadastro />
+        <FormularioCadastro criarNota={this.criarNota}/>
         <ListaNotas />
       </section>
     );
